@@ -1,0 +1,12 @@
+{
+  "name": "just-another-cv",
+  "description": "Simple Travis-CI check for JSHint",
+  "author": "dredtrake",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "scripts": {
+    "test": "jshint app/js/main.js"
+  }
+}

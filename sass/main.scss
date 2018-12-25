@@ -1,0 +1,231 @@
+@import 'variables';
+
+* {
+	box-sizing: border-box;
+};
+
+body {
+	font-family: $font-family;
+	font-size: $body-font-size;
+	background-image: url($background-image);
+	background-repeat: $background-repeat;
+}
+
+header {
+	h1 {
+		display: inline-block;
+		vertical-align: middle;
+		width: 80%;
+		padding: 0 25px;
+		line-height: 0.75;
+		small {
+			font-size: 1.1rem;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+h2 {
+	font-size: 1.3rem;
+	width: 90%;
+	margin: 20px 0 10px 15px;
+	position: relative;
+}
+
+h3 {
+	width: 90%;
+	margin: 10px 0 0 40px;
+}
+
+ul {
+	display: inline-block;
+	background-color: $list-background-color;
+	width: 100%;
+	margin: $bloc-margin;
+	padding: 15px 30px;
+	list-style-position: inside;
+	li {
+		list-style-type: $list-style-type;
+	}
+	&.white {
+		background-color: transparent;
+		margin: -20px 0 20px 10px;
+	}
+}
+
+p {
+	display: inline-block;
+	background-color: transparent;
+	width: 90%;
+	margin: $bloc-margin;
+	padding: 0;
+}
+
+a {
+	color: $link-color;
+	text-decoration: none;
+	&.ib {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover {
+		color: darken($link-color, 5%);
+	}
+}
+
+// the main container
+.main {
+	background-color: rgba(255, 255, 255, 0.9);
+	width: $main-bloc-width;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+// not really the half, 
+// but if looks like because of the design
+.half {
+	display: inline-block;
+	vertical-align: top;
+	width: 48%;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+
+.me {
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 50%;
+	width: 20%;
+}
+
+.fork-me-github {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+}
+// --- Btn
+.btn {
+	width: 100%;
+	border-radius: $border-radius;
+	&.default {
+		background-color: $link-color;
+		border: 1px solid darken($link-color, 10%);
+		color: $white;
+		padding: 5px;
+		&:hover {
+			background-color: darken($link-color, 5%);
+		}
+	}
+}
+
+// --- Modal
+.modal {
+	.overlay {
+		transition: opacity 0.5s ease;
+		opacity: 0;
+		&.fade {
+			background-color: $black;
+			display: block;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+			opacity: 0;
+			&.in {
+				opacity: .5;
+			}
+		}
+	}
+	.modal-content {
+		transition: all 0.5s ease;
+		background-color: $white;
+		position: fixed;
+		top: -1000px;
+		left: 50%;
+		margin: auto;
+		width: 300px;
+		height: 380px;
+		transform: translate(-50%, 0);
+		padding: 0;
+		-webkit-box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
+		-moz-box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
+		box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
+		border-radius: $border-radius;
+		.close {
+			position: absolute;
+			right: -12px;
+			top: -12px;
+			background-color: $grey-dark;
+			border-radius: 50%;
+			height: 30px;
+			width: 30px;
+			cursor: pointer;
+			&:before {
+				transition: all .3s ease;
+				position: absolute;
+				right: 10px;
+				top: 10px;
+				font-family: cursive;
+				content: 'x';
+				font-size: 14px;
+				color: $white;
+				font-weight: 700;
+				line-height: 0.4;
+				height: 9px;
+				width: 9px;
+			}
+			&:hover {
+				background-color: darken($grey-dark, 5%);
+				&:before {
+					transform: rotate(90deg);
+				}
+			}
+			// > &:before {
+			// }
+		}
+		.modal-body {
+			height: 100%;
+			padding: 10px 20px;
+		}
+		h2 {
+			margin: 5px 0 10px;
+		}
+		p {
+			margin: 0 auto 10px;
+			width: 100%;
+			display: inline-block;
+			input[type="text"],
+			textarea {
+				padding: 5px;
+				width: 100%;
+				border-radius: $border-radius;
+				border: 1px solid $grey;
+				font-family: $font-family;
+			}
+			textarea {
+				height: 115px;
+			}
+			a {
+				font-weight: 700;
+			}
+		}
+		.g-recaptcha {
+			transform:scale(0.856);
+			transform-origin:0 0;
+		}
+		&.in {
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}

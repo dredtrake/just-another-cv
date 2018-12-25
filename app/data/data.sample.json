@@ -1,0 +1,68 @@
+{
+  "sendmail_url": "scripts/sendMail.php",
+  "recaptcha_key": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+  "head": {
+    "title": "Title of the document",
+    "font": "Montserrat"
+  },
+  "header": {
+    "avatar-img": "img/me.jpg",
+    "name": "My name",
+    "role": "My role",
+    "linked-in-url": "https://www.linkedin.com/in/my-id-xxxxxxxx"
+  },
+  "experiences": [{
+      "title": "title experience 1",
+      "url": "http://a-url ?",
+      "name": "the company name?",
+      "place": "where was the place?",
+      "date": "when was it?",
+      "description": "What did you did?"
+    },{
+      "title": "title experience 2",
+      "url": "http://a-url ?",
+      "name": "the company name?",
+      "place": "where was the place?",
+      "date": "when was it?",
+      "description": "What did you did?"
+    },
+    {
+      "title": "title experience 3",
+      "url": "http://a-url ?",
+      "name": "the company name?",
+      "place": "where was the place?",
+      "date": "when was it?",
+      "description": "What did you did?",
+      "list": ["item 1", "item 2"]
+    }
+  ],
+  "tiles": {
+    "title": "Skills",
+    "skills": [{
+        "title": "the field",
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3",
+          "item 4"
+        ]
+      },
+      {
+        "title": "another field",
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3"
+        ]
+      },
+      {
+        "title": "hobbies",
+        "items": [
+          "item 1",
+          "item 2",
+          "item 3"
+        ]
+      }
+    ]
+  }
+}

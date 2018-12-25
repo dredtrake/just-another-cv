@@ -1,0 +1,5 @@
+.sass-cache
+app/data/data.json
+app/scripts/env.php
+app/vendor
+node_modules
