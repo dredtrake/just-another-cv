@@ -9,3 +9,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - The basic of the project
 - README.md file
 - tools to recompile assets
+- travis with basic pipe
+- travis status in README.md
+
+## 0.0.2 - 27-12-2018
+### Fixed
+- load data via relative path

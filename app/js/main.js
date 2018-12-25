@@ -1,7 +1,7 @@
 var googleRecaptchaLoaded = false;
 var recaptchaToken        = false;
 
-ajax('/data/data.json', init, 'GET', null);
+ajax('data/data.json', init, 'GET', null);
 
 // main fn
 function init(data) {
@@ -35,11 +35,11 @@ function ajax(url, callback, method, data) {
 		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 			try {
 				var data = JSON.parse(xmlhttp.responseText);
+				callback(data);
 			} catch(err) {
 				console.log(err.message + " in " + xmlhttp.responseText);
 				return;
 			}
-			callback(data);
 		}
 	};
 	if(method === 'POST') {

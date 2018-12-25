@@ -1,6 +1,10 @@
-(function() {
-  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['header.tmpl.js'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "(function() {\n  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};\ntemplates['header.tmpl'] = template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3=\"function\", alias4=container.escapeExpression;\n\n  return \"<img class=\\\"me\\\" src=\\\"\"\n    + alias4(((helper = (helper = helpers[\"avatar-img\"] || (depth0 != null ? depth0[\"avatar-img\"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"avatar-img\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\\"><!--\\r\\n--><h1>\\r\\n\"\n    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"name\",\"hash\":{},\"data\":data}) : helper)))\n    + \"<br>\\r\\n<small>\\r\\n  \"\n    + alias4(((helper = (helper = helpers.role || (depth0 != null ? depth0.role : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"role\",\"hash\":{},\"data\":data}) : helper)))\n    + \"<br>\\r\\n  <a href=\\\"contact.html\\\" class=\\\"js_contact-form ib\\\">contact me</a> <a href=\\\"\"\n    + alias4(((helper = (helper = helpers[\"linked-in-url\"] || (depth0 != null ? depth0[\"linked-in-url\"] : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{\"name\":\"linked-in-url\",\"hash\":{},\"data\":data}) : helper)))\n    + \"\\\" class=\\\"ib\\\"><img src=\\\"img/logo-linkedin-48x48.png\\\" /></a>\\r\\n</small>\\r\\n</h1>\";\n},\"useData\":true});\n})();";
-},"useData":true});
-})();
+{{#if avatar-img}}
+<img class="me" src="{{avatar-img}}">
+{{/if}}
+<h1>
+	{{name}}<br>
+	<small>
+		{{role}}<br>
+		<a href="contact.html" class="js_contact-form ib">contact me</a> <a href="{{linked-in-url}}" class="ib"><img src="img/logo-linkedin-48x48.png" /></a>
+	</small>
+</h1>
