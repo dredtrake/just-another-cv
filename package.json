@@ -4,9 +4,20 @@
   "author": "dredtrake",
   "version": "0.0.1",
   "devDependencies": {
-    "jshint": "^2.6.0"
+    "standard": "*"
   },
   "scripts": {
-    "test": "jshint app/js/main.js"
+    "test": "standard"
+  },
+  "standard": {
+    "ignore": [
+      "app/js/templates"
+    ],
+    "globals": [ 
+      "FormData", 
+      "grecaptcha", 
+      "Handlebars", 
+      "XMLHttpRequest"
+    ]
   }
 }

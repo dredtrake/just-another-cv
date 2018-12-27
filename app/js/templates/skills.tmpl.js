@@ -1,6 +1,23 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['skills.tmpl'] = template({"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    return "(function() {\n  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};\ntemplates['skills.tmpl.js'] = template({\"compiler\":[7,\">= 4.0.0\"],\"main\":function(container,depth0,helpers,partials,data) {\n    return \"(function() {\\n  var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};\\ntemplates['skills.tmpl'] = template({\\\"1\\\":function(container,depth0,helpers,partials,data) {\\n    var stack1;\\n\\n  return \\\"<h3>\\\"\\n    + container.escapeExpression(container.lambda((depth0 != null ? depth0.title : depth0), depth0))\\n    + \\\"</h3>\\\\r\\\\n<ul>\\\\r\\\\n\\\"\\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.items : depth0),{\\\"name\\\":\\\"each\\\",\\\"hash\\\":{},\\\"fn\\\":container.program(2, data, 0),\\\"inverse\\\":container.noop,\\\"data\\\":data})) != null ? stack1 : \\\"\\\")\\n    + \\\"</ul>\\\\r\\\\n\\\";\\n},\\\"2\\\":function(container,depth0,helpers,partials,data) {\\n    return \\\"	<li>\\\"\\n    + container.escapeExpression(container.lambda(depth0, depth0))\\n    + \\\"</li>\\\\r\\\\n\\\";\\n},\\\"compiler\\\":[7,\\\">= 4.0.0\\\"],\\\"main\\\":function(container,depth0,helpers,partials,data) {\\n    var stack1;\\n\\n  return \\\"<h2>\\\"\\n    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.items : depth0)) != null ? stack1.title : stack1), depth0))\\n    + \\\"</h2>\\\\r\\\\n\\\"\\n    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),((stack1 = (depth0 != null ? depth0.items : depth0)) != null ? stack1.skills : stack1),{\\\"name\\\":\\\"each\\\",\\\"hash\\\":{},\\\"fn\\\":container.program(1, data, 0),\\\"inverse\\\":container.noop,\\\"data\\\":data})) != null ? stack1 : \\\"\\\");\\n},\\\"useData\\\":true});\\n})();\";\n},\"useData\":true});\n})();";
+templates['skills.tmpl'] = template({"1":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<h3 class=\"indent\">"
+    + container.escapeExpression(container.lambda((depth0 != null ? depth0.title : depth0), depth0))
+    + "</h3>\n<ul>\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.items : depth0),{"name":"each","hash":{},"fn":container.program(2, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "</ul>\n";
+},"2":function(container,depth0,helpers,partials,data) {
+    return "	<li>"
+    + container.escapeExpression(container.lambda(depth0, depth0))
+    + "</li>\n";
+},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<h2>"
+    + container.escapeExpression(container.lambda(((stack1 = (depth0 != null ? depth0.items : depth0)) != null ? stack1.title : stack1), depth0))
+    + "</h2>\n"
+    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),((stack1 = (depth0 != null ? depth0.items : depth0)) != null ? stack1.skills : stack1),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 })();

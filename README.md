@@ -1,6 +1,7 @@
 # just-another-cv 
 
 [![Build Status](https://travis-ci.com/dredtrake/just-another-cv.svg?branch=master)](https://travis-ci.com/dredtrake/just-another-cv)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Hi there, 
 this cv is free of use.

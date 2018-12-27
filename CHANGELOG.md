@@ -15,3 +15,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.0.2 - 27-12-2018
 ### Fixed
 - load data via relative path
+
+## 0.0.3 - 28-12-2018
+### Added
+- replace jshint by standardjs
+- correcting the js file to be standardjs friendly
+- removing handlebars dependancy (now availlable via bower)

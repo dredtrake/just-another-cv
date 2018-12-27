@@ -1,0 +1,28 @@
+{
+  "name": "just-another-cv",
+  "description": "A simple resume",
+  "main": "",
+  "authors": [
+    "dredtrake"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "javascript",
+    "html5",
+    "sass",
+    "mail"
+  ],
+  "homepage": "https://github.com/dredtrake/just-another-cv",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "app/bower_components",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.12"
+  }
+}
