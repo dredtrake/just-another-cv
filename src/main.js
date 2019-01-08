@@ -6,7 +6,7 @@ import templateExperiences from '../templates/experiences.tmpl'
 import templateSkills from '../templates/skills.tmpl'
 import templateModal from '../templates/modal.tmpl'
 
-const Handlebars = require('handlebars/runtime')
+// const Handlebars = require('handlebars/runtime')
 var googleRecaptchaLoaded = false
 
 ajax('data/data.json', init, 'GET', null)
