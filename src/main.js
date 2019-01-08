@@ -1,18 +1,18 @@
 /* exported onloadCallback */
-const Handlebars = require('handlebars/runtime')
 
-import templateHead from '../templates/head.tmpl';
+import templateHead from '../templates/head.tmpl'
 import templateHeader from '../templates/header.tmpl'
 import templateExperiences from '../templates/experiences.tmpl'
 import templateSkills from '../templates/skills.tmpl'
 // import templateModal from '../templates/modal.tmpl'
+
+const Handlebars = require('handlebars/runtime')
 var googleRecaptchaLoaded = false
 
 ajax('data/data.json', init, 'GET', null)
 
 // main fn
 function init (data) {
-
   // var templateHead = Handlebars.templates['head.tmpl'] // your template minus the .js
   var contextHead = data.head // your data
   var head = templateHead(contextHead)
@@ -33,7 +33,7 @@ function init (data) {
   var skills = templateSkills({ items: contextSkills })
   document.getElementsByClassName('half')[1].innerHTML = skills
 
-  // bindContact(data.sendmail_url, data.recaptcha_key)
+  bindContact(data.sendmail_url, data.recaptcha_key)
 }
 
 // some helper functions so far

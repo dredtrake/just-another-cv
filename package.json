@@ -14,7 +14,8 @@
   },
   "standard": {
     "ignore": [
-      "app/js/templates"
+      "app/",
+      "webpack.config.js"
     ],
     "globals": [
       "FormData",
