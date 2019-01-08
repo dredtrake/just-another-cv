@@ -2,9 +2,12 @@
   "name": "just-another-cv",
   "description": "Simple Travis-CI check for JSHint",
   "author": "dredtrake",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "devDependencies": {
-    "standard": "*"
+    "handlebars-loader": "^1.7.1",
+    "standard": "*",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
   },
   "scripts": {
     "test": "standard"
@@ -13,11 +16,14 @@
     "ignore": [
       "app/js/templates"
     ],
-    "globals": [ 
-      "FormData", 
-      "grecaptcha", 
-      "Handlebars", 
+    "globals": [
+      "FormData",
+      "grecaptcha",
+      "Handlebars",
       "XMLHttpRequest"
     ]
+  },
+  "dependencies": {
+    "handlebars": "^4.0.12"
   }
 }

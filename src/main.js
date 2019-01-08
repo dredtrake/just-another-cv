@@ -1,32 +1,39 @@
 /* exported onloadCallback */
+const Handlebars = require('handlebars/runtime')
 
+import templateHead from '../templates/head.tmpl';
+import templateHeader from '../templates/header.tmpl'
+import templateExperiences from '../templates/experiences.tmpl'
+import templateSkills from '../templates/skills.tmpl'
+// import templateModal from '../templates/modal.tmpl'
 var googleRecaptchaLoaded = false
 
 ajax('data/data.json', init, 'GET', null)
 
 // main fn
 function init (data) {
-  var templateHead = Handlebars.templates['head.tmpl'] // your template minus the .js
+
+  // var templateHead = Handlebars.templates['head.tmpl'] // your template minus the .js
   var contextHead = data.head // your data
   var head = templateHead(contextHead)
   document.getElementsByTagName('head')[0].innerHTML += head
 
   var contextHeader = data.header // your data
-  var templateHeader = Handlebars.templates['header.tmpl'] // your template minus the .js
+  // var templateHeader = Handlebars.templates['header.tmpl'] // your template minus the .js
   var header = templateHeader(contextHeader)
   document.getElementsByTagName('header')[0].innerHTML = header
 
   var contextExperiences = data.experiences // your data
-  var templateExperiences = Handlebars.templates['experiences.tmpl'] // your template minus the .js
+  // var templateExperiences = Handlebars.templates['experiences.tmpl'] // your template minus the .js
   var experiences = templateExperiences({ items: contextExperiences })
   document.getElementsByClassName('half')[0].innerHTML = experiences
 
   var contextSkills = data.tiles // your data
-  var templateSkills = Handlebars.templates['skills.tmpl'] // your template minus the .js
+  // var templateSkills = Handlebars.templates['skills.tmpl'] // your template minus the .js
   var skills = templateSkills({ items: contextSkills })
   document.getElementsByClassName('half')[1].innerHTML = skills
 
-  bindContact(data.sendmail_url, data.recaptcha_key)
+  // bindContact(data.sendmail_url, data.recaptcha_key)
 }
 
 // some helper functions so far

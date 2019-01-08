@@ -21,3 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - replace jshint by standardjs
 - correcting the js file to be standardjs friendly
 - removing handlebars dependancy (now availlable via bower)
+
+## 0.0.4 - 06-01-2018
+### Changed
+- Using Webpackjs instead of Bower
