@@ -11,5 +11,6 @@ module.exports = {
     rules: [
       { test: /\.tmpl$/, loader: 'handlebars-loader' }
     ]
-  }
+  },
+  watch: true
 };

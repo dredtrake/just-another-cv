@@ -4,7 +4,7 @@ import templateHead from '../templates/head.tmpl'
 import templateHeader from '../templates/header.tmpl'
 import templateExperiences from '../templates/experiences.tmpl'
 import templateSkills from '../templates/skills.tmpl'
-// import templateModal from '../templates/modal.tmpl'
+import templateModal from '../templates/modal.tmpl'
 
 const Handlebars = require('handlebars/runtime')
 var googleRecaptchaLoaded = false
@@ -63,7 +63,6 @@ function bindContact (url, recaptchaKey) {
   var contactBtn = document.getElementsByClassName('js_contact-form')[0]
   contactBtn.addEventListener('click', function (e) {
     e.preventDefault()
-    var templateModal = Handlebars.templates['modal.tmpl'] // your template minus the .js
     var modal = templateModal({ send_url: url, recaptcha_key: recaptchaKey })
     document.getElementsByClassName('modal')[0].innerHTML = modal
     // template is ready to use
