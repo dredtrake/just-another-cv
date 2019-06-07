@@ -92,6 +92,9 @@ a {
 	display: inline-block;
 	vertical-align: top;
 	width: 48%;
+	&.mounted-top {
+		margin-top: -310px
+	}
 }
 
 .text-center {

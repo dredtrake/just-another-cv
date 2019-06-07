@@ -16,14 +16,13 @@ this page is rendered [here](http://bacasable-lab.fr/cv/)
 If you want to use the template as it is you just have to fork or download the project from this page.
 If you want to add some custom changes, handlebars and compass might be required.
 The project need an apache (or any other server that handle php) and a recent version of php running.
-You need a version of composer and run the command ```composer install``` from the root directory.
-You need a google recaptcha key.
+You need a google recaptcha key (if you plan to use the email function).
 You need to create a file from the sample file: app/data/data.sample.json and name it: app/data/data.json then edit the content to match your needs,
 same with the: app/scripts/env.sample.php and name it app/scripts/env.php that you need to edit and set your server informations
 
 ### Css
 If you want to recompile the stylesheets you would need to have compass installed
-then just run ```compass watch``` from the root folder (it will compile the scss file anytime you modify them)
+then just run ```gulp sass:watch``` from the root folder (it will compile the scss file anytime you modify them)
 
 ### Templates
 To build  the template open a terminal in the tools folder and just the bash script generateTemplates.sh
