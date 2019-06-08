@@ -1,7 +1,7 @@
 const gulp = require('gulp');
-var sass = require('gulp-sass');
-var cssmin = require('gulp-cssnano');
-var rename = require('gulp-rename');
+const sass = require('gulp-sass');
+const cssmin = require('gulp-cssnano');
+const rename = require('gulp-rename');
 // var uglify = require('gulp-uglify');
 
 sass.compiler = require('node-sass');
@@ -14,7 +14,7 @@ sass.compiler = require('node-sass');
 //   );
 // });
 
-let sassDir = './sass/**/*.scss';
+const sassDir = './sass/**/*.scss';
 gulp.task('sass', function () {
   return gulp.src(sassDir)
     .pipe(sass({style: 'compressed'}))
@@ -23,7 +23,7 @@ gulp.task('sass', function () {
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./app/css'));
 });
- 
-gulp.task('sass:watch', function () {
-  gulp.watch(sassDir, ['sass']);
+
+gulp.task('sass:watch', function(){
+    gulp.watch(sassDir, gulp.series('sass'));
 });

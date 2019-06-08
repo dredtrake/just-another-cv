@@ -9,7 +9,7 @@ templates['experiences.tmpl'] = template({"1":function(container,depth0,helpers,
     + alias2(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias4),(typeof helper === alias5 ? helper.call(alias3,{"name":"url","hash":{},"data":data}) : helper)))
     + "\">@"
     + alias2(alias1((depth0 != null ? depth0.name : depth0), depth0))
-    + "</a><br>\n	<small>"
+    + "</a><small>"
     + alias2(alias1((depth0 != null ? depth0.place : depth0), depth0))
     + ", "
     + alias2(((helper = (helper = helpers.date || (depth0 != null ? depth0.date : depth0)) != null ? helper : alias4),(typeof helper === alias5 ? helper.call(alias3,{"name":"date","hash":{},"data":data}) : helper)))

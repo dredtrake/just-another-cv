@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'modal';
 
 * {
 	box-sizing: border-box;
@@ -13,13 +14,15 @@ body {
 
 header {
 	h1 {
+		font-family: 'Barlow', sans-serif;
 		display: inline-block;
 		vertical-align: middle;
 		width: 80%;
 		padding: 0 25px;
 		line-height: 0.75;
+		font-size: 2.5rem;
 		small {
-			font-size: 1.1rem;
+			font-size: 1.3rem;
 			a {
 				text-decoration: none;
 			}
@@ -28,23 +31,50 @@ header {
 }
 
 h2 {
-	font-size: 1.3rem;
+	font-family: 'Barlow', sans-serif;
+	font-size: 2rem;
 	width: 90%;
 	margin: 20px 0 10px 15px;
 	position: relative;
 }
 
 h3 {
+	font-size: 1.6rem;
+	font-family: 'Barlow', sans-serif;
 	width: 90%;
+	color: $medium-grey;
 	margin: 10px 0 0 15px;
+	line-height: 0.9;
 	&.indent {
 		margin: 10px 0 0 40px;
 	}
+	a {
+		font-size: 1.2rem;
+	}
+	small {
+		font-size: 1rem;
+		padding-left: 10px;
+		font-family: $font-family;
+	}
 }
-
+.card {
+	background-color: $list-background-color;
+	position: relative;
+	margin: 20px 0 0 15px;
+	h3 {
+		position: absolute;
+		right: 10px;
+		top: 0;
+		display: inline-block;
+		width: auto;
+		color: #BBB;
+		text-shadow: -1px -1px rgba(255, 255, 255, 0.5);
+		text-transform: uppercase;
+		font-size: 1.8rem;
+	}
+}
 ul {
 	display: inline-block;
-	background-color: $list-background-color;
 	width: 100%;
 	margin: $bloc-margin;
 	padding: 15px 30px;
@@ -93,7 +123,7 @@ a {
 	vertical-align: top;
 	width: 48%;
 	&.mounted-top {
-		margin-top: -310px
+		margin-top: -455px;
 	}
 }
 
@@ -132,106 +162,3 @@ a {
 	}
 }
 
-// --- Modal
-.modal {
-	.overlay {
-		transition: opacity 0.5s ease;
-		opacity: 0;
-		&.fade {
-			background-color: $black;
-			display: block;
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			overflow: hidden;
-			opacity: 0;
-			&.in {
-				opacity: .5;
-			}
-		}
-	}
-	.modal-content {
-		transition: all 0.5s ease;
-		background-color: $white;
-		position: fixed;
-		top: -1000px;
-		left: 50%;
-		margin: auto;
-		width: 300px;
-		height: 380px;
-		transform: translate(-50%, 0);
-		padding: 0;
-		-webkit-box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
-		-moz-box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
-		box-shadow: 3px 3px 16px 0px rgba(0,0,0,0.7);
-		border-radius: $border-radius;
-		.close {
-			position: absolute;
-			right: -12px;
-			top: -12px;
-			background-color: $grey-dark;
-			border-radius: 50%;
-			height: 30px;
-			width: 30px;
-			cursor: pointer;
-			&:before {
-				transition: all .3s ease;
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				font-family: cursive;
-				content: 'x';
-				font-size: 14px;
-				color: $white;
-				font-weight: 700;
-				line-height: 0.4;
-				height: 9px;
-				width: 9px;
-			}
-			&:hover {
-				background-color: darken($grey-dark, 5%);
-				&:before {
-					transform: rotate(90deg);
-				}
-			}
-			// > &:before {
-			// }
-		}
-		.modal-body {
-			height: 100%;
-			padding: 10px 20px;
-		}
-		h2 {
-			margin: 5px 0 10px;
-		}
-		p {
-			margin: 0 auto 10px;
-			width: 100%;
-			display: inline-block;
-			input[type="text"],
-			textarea {
-				padding: 5px;
-				width: 100%;
-				border-radius: $border-radius;
-				border: 1px solid $grey;
-				font-family: $font-family;
-			}
-			textarea {
-				height: 115px;
-			}
-			a {
-				font-weight: 700;
-			}
-		}
-		.g-recaptcha {
-			transform:scale(0.856);
-			transform-origin:0 0;
-		}
-		&.in {
-			top: 50%;
-			transform: translate(-50%, -50%);
-		}
-	}
-}

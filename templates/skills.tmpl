@@ -1,9 +1,12 @@
+
 <h2>{{items.title}}</h2>
 {{#each items.skills}}
-<h3 class="indent">{{this.title}}</h3>
-<ul>
-{{#each this.items}}
-	<li>{{this}}</li>
-{{/each}}
-</ul>
+<div class="card">
+	<h3 class="indent">{{this.title}}</h3>
+	<ul>
+	{{#each this.items}}
+		<li>{{this}}</li>
+	{{/each}}
+	</ul>
+</div>
 {{/each}}
